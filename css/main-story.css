@@ -1,0 +1,130 @@
+main div.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+main div article {
+  padding: 0 20px;
+}
+
+article h1,
+.home h3 {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home h3 {
+  margin: 100px 40px 40px;
+  font-size: 2em;
+  text-transform: capitalize;
+  text-indent: 0;
+  line-height: 45px;
+  text-shadow: 1.5px 2px 0 #04d98b, 1px 0 7px rgba(106, 68, 242, 1);
+  /* text-shadow: <x-offset> <y-offset> <blur> <color>; */
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+
+.home div {
+  width: 100%;
+}
+
+div.hanabi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.hanabi img {
+  object-fit: cover;
+  max-width: 100%;
+  filter: brightness(130%) saturate(140%);
+}
+
+article.story {
+  overflow: auto;
+  text-indent: 20px;
+  text-align: justify;
+}
+
+.img-story {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+img[src="./image/story/hanabi.webp"] {
+  width: 90%;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 3px 5px 5px rgb(65, 140, 201);
+}
+
+img[src="./image/story/Hanabi_lore.webp"] {
+  width: 90%;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 3px 5px 5px violet;
+}
+img[src="./image/story/Hanabi_lore_2.webp"] {
+  width: 90%;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 3px 5px 5px #e8b427;
+}
+img[src="./image/story/Hanabi_lore_3.webp"] {
+  width: 90%;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 3px 5px 5px aqua;
+}
+
+.p-story {
+  margin: 15px 0;
+}
+
+/* ukuran medium */
+@media (min-width: 768px) {
+  main .content {
+    margin-top: 90px;
+  }
+  .home div h3 {
+    margin-bottom: 70px;
+    margin-right: 50px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .hanabi img {
+    border-radius: 30px;
+  }
+
+  .img-story img {
+    width: 60%;
+  }
+
+  .img-story {
+    justify-content: center;
+  }
+
+  article h1 {
+    font-size: 40px;
+  }
+  main div article {
+    margin: 10px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+  }
+}
+
+/* ukuran large */
+@media (min-width: 1024px) {
+  .img-story {
+    justify-content: start;
+  }
+}

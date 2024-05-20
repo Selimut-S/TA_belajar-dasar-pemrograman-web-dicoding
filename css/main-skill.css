@@ -1,0 +1,148 @@
+/* skill */
+
+article.skill p {
+  text-indent: 20px;
+  text-align: justify;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tablink {
+  background: rgb(136, 132, 255);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+    box-shadow: -1px 2px 5px rgb(141, 141, 8);
+  border-radius: 0 10px 0 10px;
+  font-weight: 550;
+}
+
+.tablink:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(106, 68, 242, 1) 0%,
+    cyan 100%
+
+  );
+  transition: all 1s ease-in-out;
+;
+}
+
+.active {
+  background: linear-gradient(
+    45deg,
+    rgba(106, 68, 242, 1) 0%,
+    cyan 100%
+
+  );
+    box-shadow: -1px 2px 5px rgb(141, 141, 8);
+;
+}
+
+.skill-hanabi {
+  margin: 20px 0;
+}
+
+.skill-body div.tabs {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.style-img-skill {
+  width: 70px;
+  border: solid red 2.5px;
+  border-radius: 50%;
+	filter: blur(2px) grayscale(30%);/*contoh penggunaan filter bertumpuk*/
+    transition: 1s;
+}
+
+.style-img-skill:hover {
+  transform: rotate(360deg);
+  border: solid red 2.5px;
+	filter: blur(0) grayscale(0);
+}
+
+.style-skill {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pasif-skill {
+  margin: 10px 0;
+}
+
+.aoe {
+  background: #cfae6d;
+  margin-inline: 2.5px;
+  padding: 2px 4px 2.5px 5px;
+  border-radius: 2px;
+}
+
+.buff {
+  background: #50b3f0;
+    margin-inline: 2.5px;
+    padding: 2px 4px 2.5px 5px;
+    border-radius: 2px;
+}
+
+.shield {
+  background: #50f098;
+    margin-inline: 2.5px;
+    padding: 2px 4px 2.5px 5px;
+    border-radius: 2px;
+}
+
+.cc {
+  background: #f05050;
+    margin-inline: 2.5px;
+    padding: 2px 4px 2.5px 5px;
+    border-radius: 2px;
+}
+
+/* ukuran medium */
+@media (min-width: 768px) {
+    main {
+      display: flex;
+    }
+
+    main .content {
+      width: 70%;
+    }
+
+    main #developer {
+      width: 30%;
+    }
+    .style-img-skill {
+  width: 100px;
+  border: solid red 2.5px;
+  border-radius: 50%;
+	filter: blur(2px) grayscale(30%);/*contoh penggunaan filter bertumpuk*/
+    transition: 1s;
+  
+}
+.skill-body div.tabs {
+  justify-content: start;
+  gap: 10px;
+}
+    .tablink{
+      font-size: 18px;
+    }
+        .style-skill {
+          font-size: 30px;
+          font-weight: 700;
+        }
+}
+
+/* ukuran large */
+@media (max-width: 1024px) {
+}
+

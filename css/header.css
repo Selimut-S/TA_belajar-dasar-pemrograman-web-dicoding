@@ -1,0 +1,170 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  /* margin-top: -.5px; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(196, 95, 255);
+  height: 45px;
+  align-items: center;
+  padding-inline: 20px;
+  font-size: 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(23, 38, 25, 1) 0%,
+    rgba(59, 57, 115, 1) 46%,
+    rgba(106, 68, 242, 1) 100%
+  ); /*Nilai persentase dalam kode CSS tersebut mengatur posisi dari masing-masing warna pada gradien linear.*/
+  box-shadow: 0 0.5px 10px 1px #012b1c;
+  /* box-shadow: <x-offset> <y-offset> <blur> <spread> <color>; */
+}
+
+nav .logo {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-style: normal;
+  text-transform: uppercase;
+  text-shadow: 0.2px 0.6px 0 #04d98b, 1px 0 7px rgba(106, 68, 242, 1);
+  /* text-shadow: <x-offset> <y-offset> <blur> <color>; */
+}
+
+nav ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: #04d98b;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.7s;
+  border: 2px solid transparent;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  padding: 2px 3px 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #7affce;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 2px solid #7affce;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  background: rgba(175, 36, 255, 0.5);
+  box-shadow: 0 0 10px rgba(23, 38, 25, 0.75);
+}
+
+/* list navabr */
+.list-nav {
+  display: none;
+  flex-direction: column;
+  height: 15px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.list-nav input {
+  position: absolute;
+  width: 55px;
+  height: 25px;
+  opacity: 0;
+  left: -21px;
+  top: -7px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.list-nav span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #04d98b;
+  border-radius: 3px;
+  transition: all 0.7s;
+}
+
+/* animasi list */
+.list-nav input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-0.1px, -1px); /*translate(xy)*/
+  transform-origin: 0 0; /* untuk mengatur posisi sumbu rotasi (x y), karena*/
+} /* :checked akan mencari siblims nya yang merupakan span */
+.list-nav input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-0.15px, 1px);
+  transform-origin: 0 100%;
+}
+.list-nav input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+/* ukuran hp */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 40%;
+    height: 50vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      rgba(59, 57, 115, 1) 0%,
+      rgba(106, 68, 242, 1) 100%
+    );
+    z-index: -1;
+    border-bottom-left-radius: 50px;
+    transform: translateX(100%);
+    transition: all 0.7s;
+    opacity: 0;
+  }
+  nav ul.silde {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .list-nav {
+    display: flex;
+  }
+}
+
+/* ukuran medium */
+@media (min-width: 768px) {
+  nav ul {
+    width: 40%;
+    gap: 5px;
+  }
+  nav {
+    height: 50px;
+    font-size: 18px;
+    padding-inline: 30px;
+  }
+}
+
+/* ukuran large */
+@media (min-width: 1024px) {
+  nav ul {
+    width: 35%;
+    gap: 10px;
+  }
+  nav {
+    height: 60px;
+    padding-inline: 40px;
+    font-size: 20px;
+  }
+}
+
+/* ukuran xl */
+@media (min-width: 1280px) {
+  nav {
+    padding-inline: 10%;
+  }
+}
